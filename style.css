@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial Narrow', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 60px;
+}
+h2 {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: rgb(112, 157, 202);   
+}
+
+button {
+    text-transform: uppercase;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ========= header ========= */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    /* background-color: rgba(0,0,0,0.5); */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo__icon {
+    width: 80px;
+    margin-right: 10px;
+}
+.logo__text {
+    color: rgb(255, 219, 71);
+    font-size: 36px;
+    font-family: "MV Boli";
+}
+.nav__link {
+    margin-right: 10px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+/* ========= main ========= */
+.pic-top {
+    background: url(photos/top.jpg) top center / cover no-repeat;
+    height: 650px;
+}
+
+.pic-top__layer {
+    width: 100%;
+    height: 650px;
+    background-color: rgba(33, 12, 34, 0.6);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.pic-top__center {
+    color: white;
+    text-align: center;
+}
+.pic-top button {
+    position: absolute;
+    bottom: 100px;
+}
+.pic-top__center p {
+    font-size: 30px;
+}
+
+.section__title p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.offers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 80px 0;
+}
+.offers__item {
+    display: flex;
+    margin: 30px 0;
+    box-sizing: border-box;
+    width: 46%;
+}
+.offers__icon {
+    padding: 30px;
+    margin: 20px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.offers__title {
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+.offers__text {
+    color: #555;
+
+}
+.map {
+    background-image: url(icons/map.png);
+}
+.souvenir {
+    background-image: url(icons//souvenir.png);
+}
+.compass {
+    background-image: url(icons/compass.png);
+}
+.picture {
+    background-image: url(icons/picture.png);
+}
+.discussion {
+    background-image: url(icons/discussion.png);
+}
+.sun {
+    background-image: url(icons/sun.png);
+}
+
+/* ------------- others ------------- */
+.btn-blue {
+    background-color: rgb(112, 157, 202);    
+}
