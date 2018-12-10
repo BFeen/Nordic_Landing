@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Arial Narrow', sans-serif;
+    font-family: Roboto, 'Arial Narrow', sans-serif;
 }
 
 a {
@@ -9,11 +9,10 @@ a {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 50px;
 }
 h2 {
     margin-top: 50px;
-    text-align: center;
     font-size: 30px;
     text-transform: uppercase;
     color: rgb(112, 157, 202);   
@@ -33,6 +32,7 @@ button {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    padding: 0 10px;
 }
 
 /* ========= header ========= */
@@ -54,7 +54,7 @@ header {
     align-items: center;
 }
 .logo__icon {
-    width: 80px;
+    width: 65px;
     margin-right: 10px;
 }
 .logo__text {
@@ -62,22 +62,26 @@ header {
     font-size: 36px;
     font-family: "MV Boli";
 }
+nav {
+    padding-left: 20px;
+}
 .nav__link {
-    margin-right: 10px;
+    margin-right: 40px;
     font-weight: bold;
     color: white;
-    font-size: 20px;
+    font-size: 14px;
+    white-space: nowrap;
 }
 
 /* ========= main ========= */
 .pic-top {
-    background: url(photos/top.jpg) top center / cover no-repeat;
-    height: 650px;
+    background: url(../images/photos/top.jpg) center center / cover no-repeat;
+    min-height: 560px;
 }
 
 .pic-top__layer {
     width: 100%;
-    height: 650px;
+    min-height: 560px;
     background-color: rgba(33, 12, 34, 0.6);
     position: relative;
     display: flex;
@@ -97,61 +101,98 @@ header {
     font-size: 30px;
 }
 
+.section__title {
+    text-align: center;
+}
 .section__title p {
     margin-top: 20px;
-    text-align: center;
     font-size: 18px;
-    font-weight: bold;
 }
 
 .offers {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* flex-direction: column; */
     flex-wrap: wrap;
     margin: 80px 0;
 }
 .offers__item {
     display: flex;
-    margin: 30px 0;
+    flex-grow: 1;
+    flex-basis: 300px;
+    padding: 15px;
     box-sizing: border-box;
-    width: 46%;
+    min-width: 46%;
 }
 .offers__icon {
     padding: 30px;
-    margin: 20px;
+    margin: 0 20px;
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
 }
 .offers__title {
+    font-size: 16px;
     text-transform: uppercase;
     margin: 10px 0;
 }
 .offers__text {
+    font-size: 14px;
     color: #555;
-
 }
 .map {
-    background-image: url(icons/map.png);
+    background-image: url(../images/icons/map.png);
 }
 .souvenir {
-    background-image: url(icons//souvenir.png);
+    background-image: url(../images/icons//souvenir.png);
 }
 .compass {
-    background-image: url(icons/compass.png);
+    background-image: url(../images/icons/compass.png);
 }
 .picture {
-    background-image: url(icons/picture.png);
+    background-image: url(../images/icons/picture.png);
 }
 .discussion {
-    background-image: url(icons/discussion.png);
+    background-image: url(../images/icons/discussion.png);
 }
 .sun {
-    background-image: url(icons/sun.png);
+    background-image: url(../images/icons/sun.png);
 }
+
+.about {
+    min-height: 623px;
+    background-color: #ffc155;
+    display: flex;
+}
+.about__photo {
+    min-width: 50%;
+    min-height: 100%;
+    background: url(../images/photos/group.jpg) center center / cover no-repeat;
+}
+.about__item {
+    padding: 40px 0 20px 80px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.about__title {
+    color: white;
+}
+.about__text{
+    color: white;
+    margin: 20px 0;
+}
+.about__item button {
+    min-width: 180px;
+}
+
 
 /* ------------- others ------------- */
 .btn-blue {
     background-color: rgb(112, 157, 202);    
+}
+.btn-yellow {
+    border-color: rgb(203, 141, 33);
+    background-color: rgb(231, 173, 72);
 }
