@@ -12,7 +12,6 @@ h1 {
     font-size: 50px;
 }
 h2 {
-    margin-top: 50px;
     font-size: 30px;
     text-transform: uppercase;
     color: rgb(112, 157, 202);   
@@ -93,15 +92,16 @@ nav {
     color: white;
     text-align: center;
 }
+.pic-top__center p {
+    font-size: 30px;
+}
 .pic-top button {
     position: absolute;
     bottom: 100px;
 }
-.pic-top__center p {
-    font-size: 30px;
-}
 
 .section__title {
+    margin-top: 60px;
     text-align: center;
 }
 .section__title p {
@@ -113,7 +113,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* flex-direction: column; */
     flex-wrap: wrap;
     margin: 80px 0;
 }
@@ -171,10 +170,11 @@ nav {
     background: url(../images/photos/group.jpg) center center / cover no-repeat;
 }
 .about__item {
-    padding: 40px 0 20px 80px;
+    padding: 80px;
     max-width: 600px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 .about__title {
     color: white;
@@ -182,9 +182,19 @@ nav {
 .about__text{
     color: white;
     margin: 20px 0;
+    line-height: 26px;
 }
 .about__item button {
-    min-width: 180px;
+    max-width: 250px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+.gallery__item {
+    box-sizing: border-box;
+    width: 25%;
 }
 
 
@@ -193,6 +203,21 @@ nav {
     background-color: rgb(112, 157, 202);    
 }
 .btn-yellow {
-    border-color: rgb(203, 141, 33);
+    border: 1px solid rgb(203, 141, 33);
     background-color: rgb(231, 173, 72);
+}
+.line {
+    position: relative;
+    margin-bottom: 80px;
+}
+.line:after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 10px;
+    right: 10px;
+    width: 20%;
+    margin: auto;
+    height: 1px;
+    background: rgb(203, 141, 33);
 }
