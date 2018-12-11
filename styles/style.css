@@ -101,7 +101,7 @@ nav {
 }
 
 .section__title {
-    margin-top: 60px;
+    margin: 100px 0;
     text-align: center;
 }
 .section__title p {
@@ -140,24 +140,6 @@ nav {
     font-size: 14px;
     color: #555;
 }
-.map {
-    background-image: url(../images/icons/map.png);
-}
-.souvenir {
-    background-image: url(../images/icons//souvenir.png);
-}
-.compass {
-    background-image: url(../images/icons/compass.png);
-}
-.picture {
-    background-image: url(../images/icons/picture.png);
-}
-.discussion {
-    background-image: url(../images/icons/discussion.png);
-}
-.sun {
-    background-image: url(../images/icons/sun.png);
-}
 
 .about {
     min-height: 623px;
@@ -195,6 +177,40 @@ nav {
 .gallery__item {
     box-sizing: border-box;
     width: 25%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+}
+
+.review {
+    display: flex;
+    justify-content: space-between;
+}
+.review__item {
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.review__text {
+    text-align: left;
+    padding: 20px;
+    background-color: rgb(246, 243, 243);
+    font-size: 13px;
+    font-family: "Myriad Pro";
+    color: rgb(116, 116, 116);
+    font-style: italic;
+}
+.review__icon {
+    padding: 24px;
+    margin: 10px 0;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.review__title {
+    margin-left: 10px;
+    margin-top: 20px;
 }
 
 
@@ -220,4 +236,55 @@ nav {
     margin: auto;
     height: 1px;
     background: rgb(203, 141, 33);
+}
+/* ------------- icons ------------- */
+.map {
+    background-image: url(../images/icons/map.png);
+}
+.souvenir {
+    background-image: url(../images/icons//souvenir.png);
+}
+.compass {
+    background-image: url(../images/icons/compass.png);
+}
+.picture {
+    background-image: url(../images/icons/picture.png);
+}
+.discussion {
+    background-image: url(../images/icons/discussion.png);
+}
+.sun {
+    background-image: url(../images/icons/sun.png);
+}
+/* ------------- photos ------------- */
+.photo1 {
+    background-image: url(../images/photos/1.jpg);
+}
+.photo2 {
+    background-image: url(../images/photos/2.jpg);
+}
+.photo3 {
+    background-image: url(../images/photos/3.jpg);
+}
+.photo4 {
+    background-image: url(../images/photos/4.jpg);
+}
+.photo5 {
+    background-image: url(../images/photos/5.jpg);
+}
+.photo6 {
+    background-image: url(../images/photos/6.jpg);
+}
+.photo7 {
+    background-image: url(../images/photos/7.jpg);
+}
+.photo8 {
+    background-image: url(../images/photos/8.jpg);
+}
+/* ------------- avatar ------------- */
+.ava1 {
+    background-image: url(../images/testimonials/test1.jpg);
+}
+.ava2 {
+    background-image: url(../images/testimonials/test2.jpg);
 }
