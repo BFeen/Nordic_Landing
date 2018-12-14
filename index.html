@@ -126,14 +126,12 @@
             </div>
         </section>
         <section>
-            <div class="wrapper">
-                <div class="section__title">
-                    <h2 class="line">Москва в фотографиях</h2>
-                    <p>
-                        Проще всего рассказать обо всем в фотографиях. Смотрите наши фотоотчеты и 
-                        присылайте нам свои фотографии.
-                    </p>
-                </div>
+            <div class="section__title wrapper">
+                <h2 class="line">Москва в фотографиях</h2>
+                <p>
+                    Проще всего рассказать обо всем в фотографиях. Смотрите наши фотоотчеты и 
+                    присылайте нам свои фотографии.
+                </p>
             </div>
             <div class="gallery">
                 <a href="" class="gallery__item photo1"></a>
@@ -150,33 +148,82 @@
             <div class="section__title">
                 <h2 class="line">Отзывы</h2>
             </div>
-                <div class="review">
-                    <div class="review__item">
-                        <blockquote class="review__text">
-                            Были с дочкой и подругой на ночной экскурсии. Все-таки как много зависит от экскурсовода!
-                            Мы все четыре часа ходили за Станиславом Симоновым, как кролики. Боялись пропустить хоть
-                            одно слово. При этом моей дочке - которая побывала во многих местах и с детства искушенная
-                            на интересные события - была сильно увлечена.
-                        </blockquote>
-                        <div class="flex">
-                            <div class="review__icon ava2"></div>
-                            <span class="review__title">Екатерина Васильева</span>
-                        </div>
-                    </div>
-                    <div class="review__item">
-                        <blockquote class="review__text">
-                            Ездили на экскурсию с семиклассниками и родителями. Всем очень понравилось!
-                            Экскурсовод Михаил Борисович очень интересно, необычно и с юмором рассказывал о Москве 16 века.
-                            Гибко подстраивал экскурсию под интересы и потребности слушателей, ловко управлял "подачей"
-                            автобуса, не давая нам замёрзнуть.) Огромное спасибо!
-                        </blockquote>
-                        <div class="flex">
-                            <div class="review__icon ava1"></div>
-                            <span class="review__title">Анна Крушевская</span>
-                        </div>
+            <div class="review">
+                <div class="review__item">
+                    <blockquote class="review__text">
+                        Были с дочкой и подругой на ночной экскурсии. Все-таки как много зависит от экскурсовода!
+                        Мы все четыре часа ходили за Станиславом Симоновым, как кролики. Боялись пропустить хоть
+                        одно слово. При этом моей дочке - которая побывала во многих местах и с детства искушенная
+                        на интересные события - была сильно увлечена.
+                    </blockquote>
+                    <div class="flex">
+                        <div class="review__icon ava2"></div>
+                        <span class="review__title">Екатерина Васильева</span>
                     </div>
                 </div>
+                <div class="review__item">
+                    <blockquote class="review__text">
+                        Ездили на экскурсию с семиклассниками и родителями. Всем очень понравилось!
+                        Экскурсовод Михаил Борисович очень интересно, необычно и с юмором рассказывал о Москве 16 века.
+                        Гибко подстраивал экскурсию под интересы и потребности слушателей, ловко управлял "подачей"
+                        автобуса, не давая нам замёрзнуть.) Огромное спасибо!
+                    </blockquote>
+                    <div class="flex">
+                        <div class="review__icon ava1"></div>
+                        <span class="review__title">Анна Крушевская</span>
+                    </div>
+                </div>
+            </div>
         </section>
+        <section class="write-us">
+            <div>
+                <h2 class="line">Напишите нам</h2>
+            </div>
+            <form class="wrapper" method="GET" action="">
+                <div>
+                    <input type="text" name="fio" class="write-us__input" placeholder="ФИО">
+                    <input type="text" name="email" class="write-us__input" placeholder="Email">
+                    <input type="text" name="tel" class="write-us__input" placeholder="Телефон">
+                </div>
+                <textarea name="message" class="write-us__input" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+                <input type="submit" class="write-us__input write-us__btn" value="Отправить вопрос">
+            </form>
+        </section>
+        <footer>
+            <div class="footer-top">
+                <div class="wrapper">
+                    <div class="footer-top__item">
+                        <a href="index.html" class="logo">
+                            <img src="images/icons/spasskaya-tower.png" alt="logo" class="logo__icon">
+                            <span href="index.html" class="logo__text">MyMoscow</span>
+                        </a>
+                        <p class="footer-top__text">
+                            Мы приглашаем тебя на самые разные экскурсии по Москве. Автобусные и пешеходные,
+                            на целый день или на несколько часов, на свежем воздухе или с заходом в здания -
+                            у нас в ассортименте более 20 авторских экскурсий по Москве, выбирай и узнавай Москву
+                            вместе с нами!
+                        </p>
+                    </div>
+                    <div class="footer-top__item">
+                        <span class="footer-top__title">Контакты</span>
+                        <div>
+                            <div class="footer-top__icon placeholder"></div>
+                            <span>Москва, Большая Спасская 12</span>
+                        </div>
+                        <div>
+                            <div class="footer-top__icon mail"></div>
+                            <span>moscow@imoscow.ru</span>
+                        </div>
+                        <div>
+                            <div class="footer-top__icon telephone"></div>
+                            <span>8 (495) 626-46-00</span>
+                        </div>
+                    </div>
+                    <div class="footer-top__item"></div>
+                </div>
+            </div>
+            <div class="footer-bottom"></div>
+        </footer>
     </main>
 </body>
 </html>

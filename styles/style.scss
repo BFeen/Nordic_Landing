@@ -57,7 +57,7 @@ header {
         margin-right: 10px;
     }
     &__text {
-        color: $clr-orange;
+        color: rgb(255, 193, 85);
         font-size: 36px;
         font-family: "MV Boli";
     }
@@ -101,10 +101,12 @@ nav {
 }
 
 .section__title {
-    margin: 100px 0;
+    margin-top: 100px;
+    margin-bottom: 100px;
     text-align: center;
     p {
         margin-top: 20px;
+        font-weight: bold;
         font-size: 18px;
     }
 }
@@ -142,7 +144,6 @@ nav {
 }
 
 .about {
-    min-height: 623px;
     background-color: rgb(255, 193, 85);
     display: flex;
     flex-wrap: wrap;
@@ -190,6 +191,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 100px;
     &__item {
         width: 45%;
         display: flex;
@@ -219,6 +221,89 @@ nav {
         margin-left: 10px;
     }
 }
+
+.write-us {
+    background-color: rgb(246, 243, 243);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+
+    h2 {
+        margin-top: 50px;
+        text-align: center;
+    }
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    form > div {
+        display: flex;
+        flex-direction: column;
+        min-width: 48%;
+    }
+    textarea {
+        min-width: 48%;
+        max-height: 121px;
+    }
+    &__input {
+        box-sizing: border-box;
+        border: 3px solid rgb(255, 193, 85);
+        padding: 5px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    &__btn {
+        background-color: rgb(39, 58, 67);
+        color: white;
+        text-transform: lowercase;
+        min-width: 48%;
+    }
+}
+/* ========= footer ========= */
+
+.footer-top {
+    background-color: #273a43;
+    padding: 30px 0;
+    * {
+        font-family: "Myriad Pro";
+    }
+    .logo {
+        &__icon {
+            width: 40px;
+        }
+        &__text {
+            font-size: 20px;
+            font-family: "MV Boli";
+        }
+    }
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        font-size: 22px;
+        color: white;
+    }
+    &__item {
+        box-sizing: border-box;
+        padding: 10px;
+        min-width: 33.3333%;
+    }
+    &__text {
+        margin-top: 10px;
+        color: rgb(195, 195, 195);
+        font-size: 14px;
+    }
+    &__icon {
+        padding: 10px;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
 /* ------------- others ------------- */
 .btn-blue {
     background-color: $clr-blue;    
@@ -260,6 +345,15 @@ nav {
 }
 .sun {
     background-image: url(../images/icons/sun.png);
+}
+.placeholder {
+    background-image: url(../images/icons/placeholder.png)
+}
+.mail {
+    background-image: url(../images/icons/mail.png);
+}
+.telephone {
+    background-image: url(../images/icons/telephone.png);
 }
 /* ------------- photos ------------- */
 .photo1 {

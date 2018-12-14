@@ -52,7 +52,6 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 20px;
-  /* background-color: rgba(0,0,0,0.5); */
 }
 
 .logo {
@@ -70,7 +69,7 @@ header {
 }
 
 .logo__text {
-  color: #ffdb47;
+  color: #ffc155;
   font-size: 36px;
   font-family: "MV Boli";
 }
@@ -126,12 +125,14 @@ nav a {
 }
 
 .section__title {
-  margin: 100px 0;
+  margin-top: 100px;
+  margin-bottom: 100px;
   text-align: center;
 }
 
 .section__title p {
   margin-top: 20px;
+  font-weight: bold;
   font-size: 18px;
 }
 
@@ -185,7 +186,6 @@ nav a {
 }
 
 .about {
-  min-height: 623px;
   background-color: #ffc155;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -257,9 +257,12 @@ nav a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 100px;
 }
 
 .review__item {
@@ -300,6 +303,124 @@ nav a {
 
 .review__title {
   margin-left: 10px;
+}
+
+.write-us {
+  background-color: #f6f3f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+.write-us h2 {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.write-us form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.write-us form > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 48%;
+}
+
+.write-us textarea {
+  min-width: 48%;
+  max-height: 121px;
+}
+
+.write-us__input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 3px solid #ffc155;
+  padding: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.write-us__btn {
+  background-color: #273a43;
+  color: white;
+  text-transform: lowercase;
+  min-width: 48%;
+}
+
+/* ========= footer ========= */
+.footer-top {
+  background-color: #273a43;
+  padding: 30px 0;
+}
+
+.footer-top * {
+  font-family: "Myriad Pro";
+}
+
+.footer-top .logo__icon {
+  width: 40px;
+}
+
+.footer-top .logo__text {
+  font-size: 20px;
+  font-family: "MV Boli";
+}
+
+.footer-top .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-top__title {
+  font-size: 22px;
+  color: white;
+}
+
+.footer-top__item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  min-width: 33.3333%;
+}
+
+.footer-top__text {
+  margin-top: 10px;
+  color: #c3c3c3;
+  font-size: 14px;
+}
+
+.footer-top__icon {
+  padding: 10px;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* ------------- others ------------- */
@@ -352,6 +473,18 @@ nav a {
 
 .sun {
   background-image: url(../images/icons/sun.png);
+}
+
+.placeholder {
+  background-image: url(../images/icons/placeholder.png);
+}
+
+.mail {
+  background-image: url(../images/icons/mail.png);
+}
+
+.telephone {
+  background-image: url(../images/icons/telephone.png);
 }
 
 /* ------------- photos ------------- */
