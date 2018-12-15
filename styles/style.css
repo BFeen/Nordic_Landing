@@ -9,7 +9,7 @@ a {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: calc(16px + 4vw);
 }
 
 h2 {
@@ -89,12 +89,12 @@ nav a {
 /* ========= main ========= */
 .pic-top {
   background: url(../images/photos/top.jpg) center center/cover no-repeat;
-  min-height: 560px;
+  min-height: 100vh;
 }
 
 .pic-top__layer {
   width: 100%;
-  min-height: 560px;
+  min-height: 100vh;
   background-color: rgba(33, 12, 34, 0.6);
   position: relative;
   display: -webkit-box;
@@ -116,7 +116,7 @@ nav a {
 }
 
 .pic-top__center p {
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .pic-top button {
@@ -125,8 +125,8 @@ nav a {
 }
 
 .section__title {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 7vw;
+  margin-bottom: 7vw;
   text-align: center;
 }
 
@@ -201,13 +201,12 @@ nav a {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  min-width: 50%;
   min-height: 300px;
   background: url(../images/photos/group.jpg) center center/cover no-repeat;
 }
 
 .about__item {
-  padding: 80px;
+  padding: 5vw;
   max-width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -351,7 +350,7 @@ nav a {
 
 .write-us textarea {
   min-width: 48%;
-  max-height: 121px;
+  max-height: 124px;
 }
 
 .write-us__input {
@@ -396,18 +395,45 @@ nav a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .footer-top__title {
   font-size: 22px;
   color: white;
+  margin-bottom: 20px;
 }
 
 .footer-top__item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px;
   min-width: 33.3333%;
+}
+
+.footer-top__item .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 0;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-top__item .news span {
+  color: #71b6d5;
 }
 
 .footer-top__text {
@@ -418,7 +444,46 @@ nav a {
 
 .footer-top__icon {
   padding: 10px;
+  margin-right: 15px;
   background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.footer-bottom {
+  background-color: #111419;
+  padding: 15px 0;
+  color: #c3c3c3;
+  font-size: 13.5px;
+}
+
+.footer-bottom .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer-bottom .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-bottom .social__item {
+  padding: 15px;
+  margin: 5px;
+  background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -431,6 +496,30 @@ nav a {
 .btn-yellow {
   border: 1px solid #cb8d21;
   background-color: #e7ad48;
+}
+
+.menu-btn {
+  display: none;
+  padding: 5px;
+  width: 35px;
+  height: 35px;
+  border: 3px solid #ffc155;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.menu-btn__stick {
+  width: 80%;
+  height: 3px;
+  background-color: #ffc155;
 }
 
 .line {
@@ -487,6 +576,18 @@ nav a {
   background-image: url(../images/icons/telephone.png);
 }
 
+.vk {
+  background-image: url(../images/social/vk.png);
+}
+
+.fb {
+  background-image: url(../images/social/facebook.png);
+}
+
+.insta {
+  background-image: url(../images/social/instagram.png);
+}
+
 /* ------------- photos ------------- */
 .photo1 {
   background-image: url(../images/photos/1.jpg);
@@ -527,5 +628,19 @@ nav a {
 
 .ava2 {
   background-image: url(../images/testimonials/test2.jpg);
+}
+
+@media (max-width: 880px) {
+  .gallery__item {
+    width: 50%;
+  }
+  nav {
+    display: none;
+  }
+  .menu-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=style.css.map */

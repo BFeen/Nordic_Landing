@@ -11,7 +11,7 @@ a {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: calc(16px + 4vw);
 }
 h2 {
     font-size: 30px;
@@ -76,10 +76,10 @@ nav {
 /* ========= main ========= */
 .pic-top {
     background: url(../images/photos/top.jpg) center center / cover no-repeat;
-    min-height: 560px;
+    min-height: 100vh;
     &__layer {
         width: 100%;
-        min-height: 560px;
+        min-height: 100vh;
         background-color: rgba(33, 12, 34, 0.6);
         position: relative;
         display: flex;
@@ -91,7 +91,7 @@ nav {
         color: white;
         text-align: center;
         p {
-            font-size: 30px;
+            font-size: 24px;
         }
     }
     button {
@@ -101,8 +101,8 @@ nav {
 }
 
 .section__title {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 7vw;
+    margin-bottom: 7vw;
     text-align: center;
     p {
         margin-top: 20px;
@@ -150,12 +150,11 @@ nav {
     align-items: stretch;
     &__photo {
         flex-grow: 1;
-        min-width: 50%;
         min-height: 300px;
         background: url(../images/photos/group.jpg) center center / cover no-repeat;
     }
     &__item {
-        padding: 80px;
+        padding: 5vw;
         max-width: 600px;
         display: flex;
         flex-direction: column;
@@ -245,7 +244,7 @@ nav {
     }
     textarea {
         min-width: 48%;
-        max-height: 121px;
+        max-height: 124px;
     }
     &__input {
         box-sizing: border-box;
@@ -281,15 +280,32 @@ nav {
     .wrapper {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
     }
     &__title {
         font-size: 22px;
         color: white;
+        margin-bottom: 20px;
     }
     &__item {
+        flex-grow: 1;
+        flex-basis: 400px;
         box-sizing: border-box;
         padding: 10px;
         min-width: 33.3333%;
+        .contacts {
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+            color: white;
+            font-size: 14px;
+        }
+        .news {
+            span {
+                color: rgb(113, 182, 213);
+            }
+        }
     }
     &__text {
         margin-top: 10px;
@@ -298,9 +314,34 @@ nav {
     }
     &__icon {
         padding: 10px;
+        margin-right: 15px;
         background-position: center center;
         background-size: contain;
         background-repeat: no-repeat;
+    }
+}
+
+.footer-bottom {
+    background-color: #111419;
+    padding: 15px 0;
+    color: rgb(195, 195, 195);
+    font-size: 13.5px;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;;
+        flex-wrap: wrap;
+    }
+    .social {
+        display: flex;
+        justify-content: center;
+        &__item {
+            padding: 15px;
+            margin: 5px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
     }
 }
 
@@ -311,6 +352,22 @@ nav {
 .btn-yellow {
     border: 1px solid rgb(203, 141, 33);
     background-color: rgb(231, 173, 72);
+}
+.menu-btn {
+    display: none;
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+    border: 3px solid rgb(255, 193, 85);
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    &__stick {
+        width: 80%;
+        height: 3px;
+        background-color: rgb(255, 193, 85);
+    }
 }
 .line {
     position: relative;
@@ -355,6 +412,15 @@ nav {
 .telephone {
     background-image: url(../images/icons/telephone.png);
 }
+.vk {
+    background-image: url(../images/social/vk.png);
+}
+.fb {
+    background-image: url(../images/social/facebook.png);
+}
+.insta {
+    background-image: url(../images/social/instagram.png);
+}
 /* ------------- photos ------------- */
 .photo1 {
     background-image: url(../images/photos/1.jpg);
@@ -386,4 +452,16 @@ nav {
 }
 .ava2 {
     background-image: url(../images/testimonials/test2.jpg);
+}
+
+@media (max-width: 880px) {
+    .gallery__item {
+        width: 50%;
+    }
+    nav {
+        display: none;
+    }
+    .menu-btn {
+        display: flex;
+    }
 }
