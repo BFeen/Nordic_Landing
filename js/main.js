@@ -1,18 +1,24 @@
-var offset;
+var myWindow = $(window);
 $('.menu-btn').click(function() {
-    offset = $(window).scrollTop();
-    $('.menu-btn__stick:nth-child(2)').toggle(100);
-    $('.menu-btn__stick:nth-child(1)').css({
-        transform : 'rotate(45deg)',
-        position : 'absolute'
-    });
-    $('.menu-btn__stick:nth-child(3)').css({
-        transform : 'rotate(-45deg)',
-        position : 'absolute'
-    });
+    var offset = myWindow.scrollTop();
     $('nav').toggle();
-    $('nav').animate({ // Менюшка догоняет окно
+    $('nav').animate({ // Адаптивное меню догоняет окно
         top : offset,
         right: 0
     }, 500);
+
+    if ($('.menu-btn__stick:nth-child(2)').attr('style') == undefined) {
+        $('.menu-btn__stick:nth-child(2)').css('display', 'none');
+    } else {
+        $('.menu-btn__stick:nth-child(2)').removeAttr('style');
+    }
+    $('.menu-btn__stick:nth-child(1)').toggleClass('menu-btn__stick-first');
+    $('.menu-btn__stick:nth-child(3)').toggleClass('menu-btn__stick-last');
+});
+
+// Отображение обычного меню
+myWindow.resize(function() {
+    if (myWindow.width() > 880) {
+        $('nav').removeAttr('style');
+    }
 });

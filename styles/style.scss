@@ -357,28 +357,37 @@ nav {
 .menu-btn {
     display: none;
     position: fixed;
-    margin: 30px;
+    margin: 40px;
     top: 0;
     right: 0;
     z-index: 9999;
-    width: 55px;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    width: 45px;
+    height: 25px;
     cursor: pointer;
     &__stick {
-        transform: rotate(0);
-        width: 80%;
+        position: absolute;
+        width: 100%;
         height: 3px;
-        margin: 4px;
         background-color: rgb(255, 193, 85);
+        transition: 0.5s all;
+        &:nth-child(2) {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        &:nth-child(3) {
+            bottom: 0;
+        }
     }
-    // &__stick:nth-child(1) {
-    //     transform: rotate(-45deg);
-    // }
-    // &__stick:nth-child(3) {
-    //     transform: rotate(45deg);
-    // }
+    &__stick-first {
+        transform-origin: 0 0;
+        transform: rotate(45deg);
+    }
+    &__stick-last {
+        transform-origin: 0 0;
+        transform: rotate(-45deg);
+    }
 }
 .line {
     position: relative;
@@ -488,6 +497,6 @@ nav {
     }
 
     .menu-btn {
-        display: flex;
+        display: block;
     }
 }
