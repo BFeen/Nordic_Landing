@@ -327,6 +327,7 @@ nav a {
 }
 
 .write-us form {
+  min-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -339,6 +340,9 @@ nav a {
 }
 
 .write-us form > div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -346,12 +350,15 @@ nav a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-width: 48%;
+  min-width: 49%;
+}
+
+.write-us form > div:nth-child(1) {
+  margin-right: 10px;
 }
 
 .write-us textarea {
-  min-width: 48%;
-  max-height: 124px;
+  max-height: 125px;
 }
 
 .write-us__input {
@@ -361,13 +368,14 @@ nav a {
   padding: 5px;
   font-size: 16px;
   margin-bottom: 10px;
+  outline: none;
 }
 
 .write-us__btn {
   background-color: #273a43;
   color: white;
   text-transform: lowercase;
-  min-width: 48%;
+  min-width: 49%;
 }
 
 /* ========= footer ========= */
@@ -506,8 +514,8 @@ nav a {
   top: 0;
   right: 0;
   z-index: 9999;
-  width: 45px;
-  height: 25px;
+  width: 40px;
+  height: 33px;
   cursor: pointer;
 }
 
@@ -516,8 +524,10 @@ nav a {
   width: 100%;
   height: 3px;
   background-color: #ffc155;
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
 }
 
 .menu-btn__stick:nth-child(2) {
@@ -536,6 +546,7 @@ nav a {
           transform-origin: 0 0;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  top: 2px;
 }
 
 .menu-btn__stick-last {
@@ -543,6 +554,7 @@ nav a {
           transform-origin: 0 0;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  left: -2px;
 }
 
 .line {
