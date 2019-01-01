@@ -39,7 +39,7 @@ var userMessage = $('[name = "message"]');
 
 // Подсветка полей при отправке формы
 $('form').submit(function() {
-    if (!userName.val() || !userEmail.val() || !userPhone.val() || !userMessage.val()) {
+    if (!userName.val() || !userEmail.val() || !userPhone.val()) {
         if (!userName.val()) {
             userName.css('border-color', 'red');
         }
@@ -49,9 +49,6 @@ $('form').submit(function() {
         if (!userPhone.val()) {
             userPhone.css('border-color', 'red');
         }
-        if (!userMessage.val()) {
-            userMessage.css('border-color', 'red');
-        }
     } else {
         $('[name = "fio"], [name = "email"], [name = "tel"], [name = "message"]').css('border-color', 'rgb(255, 193, 85)');
     }
@@ -59,31 +56,20 @@ $('form').submit(function() {
 });
 
 // Подсветка полей формы при наборе и удалении символов
-userName.keyup(function(event) {
+$('[type = "text"]').keyup(function() {
     if (!userName.val()) {
         userName.css('border-color', 'red');
     } else {
         userName.css('border-color', 'rgb(255, 193, 85)');
     }
-});
-userEmail.keyup(function(event) {
     if (!userEmail.val()) {
         userEmail.css('border-color', 'red');
     } else {
         userEmail.css('border-color', 'rgb(255, 193, 85)');
     }
-});
-userPhone.keyup(function(event) {
     if (!userPhone.val()) {
         userPhone.css('border-color', 'red');
     } else {
         userPhone.css('border-color', 'rgb(255, 193, 85)');
-    }
-});
-userMessage.keyup(function(event) {
-    if (!userMessage.val()) {
-        userMessage.css('border-color', 'red');
-    } else {
-        userMessage.css('border-color', 'rgb(255, 193, 85)');
     }
 });
