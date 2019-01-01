@@ -473,9 +473,8 @@ nav a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -746,6 +745,9 @@ nav a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   color: #062033;
@@ -753,17 +755,20 @@ nav a {
 }
 
 .contacts__item {
+  -ms-flex-preferred-size: 550px;
+      flex-basis: 550px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 5px;
-  max-width: 50%;
+  min-width: 49%;
+  margin-bottom: 20px;
 }
 
 .contacts__input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px;
-  width: 95%;
+  width: 98%;
   font-size: 18px;
   border: 3px solid #ffc155;
   margin-bottom: 10px;
@@ -792,14 +797,21 @@ nav a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  max-width: 45%;
+  min-width: 49%;
   background-color: #ffc155;
+  -ms-flex-preferred-size: 550px;
+      flex-basis: 550px;
 }
 
-.card__icon {
-  width: 250px;
+.card__img {
+  min-width: 40%;
   height: 190px;
   background-position: center center;
   background-size: cover;
@@ -807,11 +819,11 @@ nav a {
 }
 
 .card__info {
+  width: 60%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 100%;
-  padding: 15px 30px;
-  font-size: 20px;
+  padding-top: 15px;
+  padding-left: 30px;
   border-left: 8px solid #709dca;
   font-size: 18px;
 }
@@ -825,7 +837,7 @@ nav a {
 }
 
 .card__info div:nth-child(1) {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 iframe {
