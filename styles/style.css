@@ -29,6 +29,8 @@ button {
 }
 
 .wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -401,6 +403,8 @@ nav a {
 }
 
 .footer-top .wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -424,12 +428,12 @@ nav a {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  -ms-flex-preferred-size: 400px;
-      flex-basis: 400px;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px;
-  min-width: 33.3333%;
+  width: 33.333%;
 }
 
 .footer-top__item .address {
@@ -470,6 +474,8 @@ nav a {
 }
 
 .footer-bottom .wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -755,6 +761,9 @@ nav a {
 }
 
 .contacts__item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   -ms-flex-preferred-size: 550px;
       flex-basis: 550px;
   -webkit-box-sizing: border-box;
@@ -797,11 +806,11 @@ nav a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   min-width: 49%;
@@ -813,17 +822,26 @@ nav a {
 .card__img {
   min-width: 40%;
   height: 190px;
-  background-position: center center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .card__info {
-  width: 60%;
+  min-width: 60%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 250px;
+      flex-basis: 250px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-top: 15px;
-  padding-left: 30px;
+  padding: 15px;
   border-left: 8px solid #709dca;
   font-size: 18px;
 }

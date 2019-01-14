@@ -30,6 +30,7 @@ button {
 }
 
 .wrapper {
+    box-sizing: border-box;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -287,6 +288,7 @@ nav {
         }
     }
     .wrapper {
+        box-sizing: border-box;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -299,10 +301,10 @@ nav {
     }
     &__item {
         flex-grow: 1;
-        flex-basis: 400px;
+        flex-basis: 200px;
         box-sizing: border-box;
         padding: 10px;
-        min-width: 33.3333%;
+        width: 33.333%;
         .address {
             display: flex;
             align-items: center;
@@ -336,6 +338,7 @@ nav {
     color: rgb(195, 195, 195);
     font-size: 13.5px;
     .wrapper {
+        box-sizing: border-box;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -554,6 +557,7 @@ nav {
         font-size: 22px;
     }
     &__item {
+        flex-grow: 1;
         flex-basis: 550px;
         box-sizing: border-box;
         padding: 5px;
@@ -583,8 +587,8 @@ nav {
 
     &__item {
         display: flex;
+        flex-grow: 1;
         flex-wrap: wrap;
-        align-items: stretch;
         box-sizing: border-box;
         min-width: 49%;
         background-color: rgb(255, 193, 85);
@@ -593,15 +597,20 @@ nav {
     &__img {
         min-width: 40%;
         height: 190px;
-        background-position: center center;
+        flex-grow: 1;
+        flex-basis: 200px;
+        background-position: top;
         background-size: cover;
         background-repeat: no-repeat;
     }
     &__info {
-        width: 60%;
+        min-width: 60%;
+        flex-grow: 1;
+        flex-basis: 250px;
         box-sizing: border-box;
-        padding-top: 15px;
-        padding-left: 30px;
+        // padding-top: 15px;
+        // padding-left: 30px;
+        padding: 15px;
         border-left: 8px solid $clr-blue;
         font-size: 18px;
         h3 {
