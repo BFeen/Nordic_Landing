@@ -1,4 +1,5 @@
 var myWindow = $(window);
+var stick = $('.menu-btn__stick');
 // Анимация кнопки меню и отображение\скрытие адаптивного меню
 $('.menu-btn').click(function() {
     var offset = myWindow.scrollTop();
@@ -16,13 +17,13 @@ $('.menu-btn').click(function() {
         }, 500);
     }
 
-    if ($('.menu-btn__stick:nth-child(2)').attr('style') == undefined) {
-        $('.menu-btn__stick:nth-child(2)').css('display', 'none');
+    if (stick.eq(1).attr('style') == undefined) {
+        stick.eq(1).css('display', 'none');
     } else {
-        $('.menu-btn__stick:nth-child(2)').removeAttr('style');
+        stick.eq(1).removeAttr('style');
     }
-    $('.menu-btn__stick:nth-child(1)').toggleClass('menu-btn__stick-first');
-    $('.menu-btn__stick:nth-child(3)').toggleClass('menu-btn__stick-last');
+    stick.eq(0).toggleClass('menu-btn__stick-first');
+    stick.eq(2).toggleClass('menu-btn__stick-last');
 });
 
 // Отображение обычного меню
@@ -73,3 +74,42 @@ $('[type = "text"]').keyup(function() {
         userPhone.css('border-color', 'rgb(255, 193, 85)');
     }
 });
+
+// SLIDER
+
+var sliderFlex = $('.slider__flex');
+var sliderItem = $('.slider__item');
+var sliderCounter = 1;
+
+$('.arrow').click(function() {
+    if ($(this)[0].className == 'arrow left') { // Влево
+        if (sliderCounter == sliderItem.length) {
+            sliderFlex.animate({
+                'left' : 100 * sliderCounter + '%'
+            }, 500, function() {
+                sliderFlex.css('left', '0');
+            });
+            sliderCounter = 1;
+        } else {
+            sliderFlex.animate({
+                'left' : 100 * sliderCounter + '%'
+            }, 500);
+            sliderCounter++;
+        }
+    } else if ($(this)[0].className == 'arrow right') { // Вправо
+        if (sliderCounter == sliderItem.length) {
+            sliderFlex.animate({
+                'left' : 100 * sliderCounter + '%'
+            }, 500, function() {
+                sliderFlex.css('left', '0');
+            });
+            sliderCounter = 1;
+        } else {
+            sliderFlex.animate({
+                'left' : -100 * sliderCounter + '%'
+            }, 500);
+            sliderCounter++;
+        }
+    }
+});
+

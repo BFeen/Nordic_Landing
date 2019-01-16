@@ -90,41 +90,98 @@ nav a {
 }
 
 /* ========= main ========= */
-.pic-top {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
+.slider {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  overflow: hidden;
 }
 
-.pic-top__layer {
-  width: 100%;
-  min-height: 100vh;
-  background-color: rgba(33, 12, 34, 0.6);
+.slider__flex {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 100px;
+  color: white;
+  min-height: 100vh;
+  min-width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #ffc155;
+}
+
+.hello {
+  min-height: 100vh;
+  background-color: rgba(33, 12, 34, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.pic-top__center {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: white;
+}
+
+.hello .pic-center {
   text-align: center;
+  position: relative;
 }
 
-.pic-top__center p {
-  font-size: 24px;
+.hello .arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffc155;
+  font-size: 40px;
+  font-weight: bold;
+  width: 60px;
+  height: 60px;
+  border: 4px solid #709dca;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.pic-top button {
+.hello .left {
+  position: absolute;
+  left: -200px;
+}
+
+.hello .right {
+  position: absolute;
+  right: -200px;
+}
+
+.hello button {
   position: absolute;
   bottom: 100px;
 }
@@ -764,12 +821,11 @@ nav a {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  -ms-flex-preferred-size: 550px;
-      flex-basis: 550px;
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 5px;
-  min-width: 49%;
   margin-bottom: 20px;
 }
 
@@ -803,20 +859,20 @@ nav a {
 }
 
 .card__item {
+  margin: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  min-width: 49%;
   background-color: #ffc155;
-  -ms-flex-preferred-size: 550px;
-      flex-basis: 550px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 500px;
+      flex-basis: 500px;
 }
 
 .card__img {
@@ -827,22 +883,23 @@ nav a {
           flex-grow: 1;
   -ms-flex-preferred-size: 200px;
       flex-basis: 200px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-right: 8px solid #709dca;
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .card__info {
-  min-width: 60%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  -ms-flex-preferred-size: 250px;
-      flex-basis: 250px;
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 15px;
-  border-left: 8px solid #709dca;
   font-size: 18px;
 }
 
@@ -862,5 +919,12 @@ iframe {
   width: 100%;
   border: none;
   border-top: 3px solid #ffc155;
+}
+
+@media (max-width: 539px) {
+  .card__img {
+    border-right: none;
+    border-bottom: 8px solid #709dca;
+  }
 }
 /*# sourceMappingURL=style.css.map */
