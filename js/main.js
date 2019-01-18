@@ -83,32 +83,32 @@ var sliderCounter = 1;
 
 $('.arrow').click(function() {
     if ($(this)[0].className == 'arrow left') { // Влево
-        if (sliderCounter == sliderItem.length) {
+        sliderCounter--;
+        if (sliderCounter == 0) {
             sliderFlex.animate({
-                'left' : 100 * sliderCounter + '%'
+                'left' : -100 * sliderCounter + '%'
             }, 500, function() {
-                sliderFlex.css('left', '0');
+                sliderFlex.css('left', '-300%');
             });
-            sliderCounter = 1;
+            sliderCounter = 3;
         } else {
             sliderFlex.animate({
-                'left' : 100 * sliderCounter + '%'
+                'left' : -100 * sliderCounter + '%'
             }, 500);
-            sliderCounter++;
         }
     } else if ($(this)[0].className == 'arrow right') { // Вправо
-        if (sliderCounter == sliderItem.length) {
+        sliderCounter++;
+        if (sliderCounter == sliderItem.length-1) {
             sliderFlex.animate({
-                'left' : 100 * sliderCounter + '%'
+                'left' : -100 * sliderCounter + '%'
             }, 500, function() {
-                sliderFlex.css('left', '0');
+                sliderFlex.css('left', '-100%');
             });
             sliderCounter = 1;
         } else {
             sliderFlex.animate({
                 'left' : -100 * sliderCounter + '%'
             }, 500);
-            sliderCounter++;
         }
     }
 });

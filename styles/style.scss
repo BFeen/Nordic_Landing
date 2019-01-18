@@ -85,6 +85,7 @@ nav {
     &__flex {
         position: relative;
         display: flex;
+        left: -100%;
     }
     &__item {
         display: flex;
