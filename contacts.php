@@ -1,42 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>My Moscow: contacts</title>
-</head>
+<?php 
+    $title = "Контакты";
+    include("modules/head.php"); 
+?>
 <body>
     <div class="wrapper">
-        <header>
-            <a href="index.html" class="logo">
-                <img src="images/icons/spasskaya-tower.png" alt="logo" class="logo__icon">
-                <span href="index.html" class="logo__text">MyMoscow</span>
-            </a>
-            <nav>
-                <a href="index.html">Главная</a>
-                <a href="">Наши услуги</a>
-                <a href="">О компании</a>
-                <a href="contacts.html">Контакты</a>
-                <a href="">Отзывы</a>
-            </nav>
-            <div class="menu-btn">
-                <div class="menu-btn__stick"></div>
-                <div class="menu-btn__stick"></div>
-                <div class="menu-btn__stick"></div>
-            </div>
-        </header>
+    <?php include("modules/header.php"); ?>
     </div>
     <main>
-        <div class="pic-top img-contacts">
-        <div class="pic-top__layer">
-            <div class="pic-top__center">
+        <div class="slider">
+            <div class="slider__flex">
+                <div class="slider__item">3</div>
+                <div class="slider__item img-contacts"></div>
+                <div class="slider__item">2</div>
+                <div class="slider__item">3</div>
+                <div class="slider__item img-contacts"></div>
+            </div>
+        </div>
+        <section class="hello">
+            <div class="pic-center">
+                <div class="arrow left">&lt;</div>
+                <div class="arrow right">&gt;</div>
                 <h1>MyMoscow</h1>
                 <p>агенство интересных маршрутов</p>
                 <p>- Контакты -</p>
             </div>
-        </div>
-        </div>
+        </section>
         <section class="contacts wrapper">
             <h2 class="section__title">Контакты</h2>
             <p class="contacts__text">Мы - команда тех, кто любит историю и любит Москву.</p>
@@ -118,66 +106,7 @@
         </section>
         <iframe src="https://yandex.ru/map-widget/v1/-/CBF3USbXKD" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe>
     </main>
-    <footer>
-            <div class="footer-top">
-                <div class="wrapper">
-                    <div class="footer-top__item">
-                        <a href="index.html" class="logo">
-                            <img src="images/icons/spasskaya-tower.png" alt="logo" class="logo__icon">
-                            <span href="index.html" class="logo__text">MyMoscow</span>
-                        </a>
-                        <p class="footer-top__text">
-                            Мы приглашаем тебя на самые разные экскурсии по Москве. Автобусные и пешеходные,
-                            на целый день или на несколько часов, на свежем воздухе или с заходом в здания -
-                            у нас в ассортименте более 20 авторских экскурсий по Москве, выбирай и узнавай Москву
-                            вместе с нами!
-                        </p>
-                    </div>
-                    <div class="footer-top__item">
-                        <p class="footer-top__title">Контакты</p>
-                        <div class="address">
-                            <div class="footer-top__icon placeholder"></div>
-                            <span>Москва, Большая Спасская 12</span>
-                        </div>
-                        <div class="address">
-                            <div class="footer-top__icon mail"></div>
-                            <span>moscow@imoscow.ru</span>
-                        </div>
-                        <div class="address">
-                            <div class="footer-top__icon telephone"></div>
-                            <span>8 (495) 626-46-00</span>
-                        </div>
-                    </div>
-                    <div class="footer-top__item">
-                        <p class="footer-top__title">Последние новости</p>
-                        <div class="news">
-                            <p class="footer-top__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cumque magnam odit sit
-                                explicabo similique esse at a corrupti.
-                            </p>
-                            <span>5 марта 2018</span>
-                        </div>
-                        <div class="news">
-                            <p class="footer-top__text">
-                                Fugiat ratione assumenda excepturi ut non, veniam dolore quibusdam sunt voluptatibus.
-                            </p>
-                            <span>5 марта 2018</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="wrapper">
-                    <p>&copy; 2018 Copyright. Все права защищены</p>
-                    <p>Designed by Nordic IT School</p>
-                    <div class="social">
-                            <a href="https://vk.com" target="_blanc" class="social__item vk"></a>
-                            <a href="https://facebook.com" target="_blanc" class="social__item fb"></a>
-                            <a href="https://instagram.com" target="_blanc" class="social__item insta"></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+    <?php include("modules/footer.php"); ?>
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
