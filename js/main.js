@@ -39,6 +39,7 @@ var userPhone = $('[name = "tel"]');
 var userMessage = $('[name = "message"]');
 
 // Подсветка полей при отправке формы
+
 $('form').submit(function() {
     if (!userName.val() || !userEmail.val() || !userPhone.val()) {
         if (!userName.val()) {
@@ -57,6 +58,8 @@ $('form').submit(function() {
 });
 
 // Подсветка полей формы при наборе и удалении символов
+// Доработать на this! Почему-то не отвечает сайт на изменения файла
+
 $('[type = "text"]').keyup(function() {
     if (!userName.val()) {
         userName.css('border-color', 'red');

@@ -5,7 +5,7 @@
     </a>
     <nav>
         <a href="index.php">Главная</a>
-        <a href="">Наши услуги</a>
+        <a href="trips.php">Наши услуги</a>
         <a href="">О компании</a>
         <a href="contacts.php">Контакты</a>
         <a href="">Отзывы</a>

@@ -4,7 +4,7 @@
 ?>
 <body>
     <div class="wrapper">
-    <?php include("modules/header.php"); ?>
+        <?php include("modules/header.php"); ?>
     </div>
     <main>
         <div class="slider">

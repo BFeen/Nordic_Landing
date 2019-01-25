@@ -98,9 +98,9 @@
             </section>
         </div>
         <section class="about">
-            <div class="about__photo"></div>
-            <div class="about__item">
-                <h2 class="about__title">Кто мы такие</h2>
+            <div class="about__photo about-1"></div>
+            <div class="about__block">
+                <h2 class="about__title">КТО МЫ ТАКИЕ</h2>
                 <p class="about__text">Мы - команда тех, кто любит Москву.</p>
                 <p class="about__text">
                     Москва - это не только место по "заколачиванию денег" и "взращиванию карьеры",

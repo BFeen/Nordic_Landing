@@ -260,17 +260,31 @@ nav a {
           align-items: stretch;
 }
 
+.about div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .about__photo {
+  min-width: 50%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  min-height: 300px;
-  background: url(../images/photos/group.jpg) center center/cover no-repeat;
+  min-height: 350px;
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.about__item {
+.about__block {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
   padding: 5vw;
-  max-width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -283,12 +297,14 @@ nav a {
           justify-content: center;
 }
 
-.about__item button {
+.about__block button {
   max-width: 250px;
 }
 
 .about__title {
+  text-transform: capitalize;
   color: white;
+  margin-bottom: 20px;
 }
 
 .about__text {
@@ -640,6 +656,10 @@ nav a {
   background: #cb8d21;
 }
 
+.height {
+  max-height: 900px;
+}
+
 /* ------------- icons ------------- */
 .map {
   background-image: url(../images/icons/map.png);
@@ -698,6 +718,14 @@ nav a {
   background-image: url(../images/photos/top2.jpg);
 }
 
+.img-trips {
+  background-image: url(../images/photos/top1.jpg);
+}
+
+.about-1 {
+  background-image: url(../images/photos/group.jpg);
+}
+
 .photo1 {
   background-image: url(../images/photos/1.jpg);
 }
@@ -730,6 +758,22 @@ nav a {
   background-image: url(../images/photos/8.jpg);
 }
 
+.trips-1 {
+  background-image: url(../images/photos/3_01.jpg);
+}
+
+.trips-2 {
+  background-image: url(../images/photos/2_02.jpg);
+}
+
+.trips-3 {
+  background-image: url(../images/photos/3_03.jpg);
+}
+
+.trips-4 {
+  background-image: url(../images/photos/2_04.jpg);
+}
+
 /* ------------- avatar ------------- */
 .ava1 {
   background-image: url(../images/testimonials/test1.jpg);
@@ -745,33 +789,6 @@ nav a {
 
 .ava4 {
   background-image: url(../images/testimonials/woman.jpg);
-}
-
-/* ------------- media ------------- */
-@media (max-width: 880px) {
-  .gallery__item {
-    width: 50%;
-  }
-  nav {
-    display: none;
-    position: absolute;
-    width: 95vw;
-    top: 0;
-    right: -100vw;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  nav a {
-    display: block;
-    text-align: center;
-    font-size: 20px;
-    padding: 10px;
-  }
-  nav a:hover {
-    color: #ffc155;
-  }
-  .menu-btn {
-    display: block;
-  }
 }
 
 .contacts {
@@ -920,6 +937,33 @@ iframe {
   width: 100%;
   border: none;
   border-top: 3px solid #ffc155;
+}
+
+/* ------------- media ------------- */
+@media (max-width: 880px) {
+  .gallery__item {
+    width: 50%;
+  }
+  nav {
+    display: none;
+    position: absolute;
+    width: 95vw;
+    top: 0;
+    right: -100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  nav a {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+  }
+  nav a:hover {
+    color: #ffc155;
+  }
+  .menu-btn {
+    display: block;
+  }
 }
 
 @media (max-width: 539px) {
