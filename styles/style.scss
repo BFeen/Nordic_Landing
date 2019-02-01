@@ -301,21 +301,33 @@ nav {
         }
     }
     textarea {
-        max-height: 125px;
+        box-sizing: border-box;
+        max-height: 155px;
+        min-width: 49%;
     }
     &__input {
         box-sizing: border-box;
         border: 3px solid rgb(255, 193, 85);
-        padding: 5px;
+        padding: 10px;
         font-size: 16px;
         margin-bottom: 10px;
         outline: none;
+        min-width: 100%;
     }
     &__btn {
         background-color: rgb(39, 58, 67);
         color: white;
         text-transform: lowercase;
         min-width: 49%;
+    }
+    &__item {
+        position: relative;
+    }
+    &__text {
+        position: absolute;
+        top: 13px;
+        left: 13px;
+        color: grey;
     }
 }
 /* ========= footer ========= */
@@ -466,6 +478,9 @@ nav {
 }
 .height { // Ограничить высоту блоков в Trips
     max-height: 900px;
+}
+.error {
+    color: red;
 }
 /* ------------- icons ------------- */
 .map {

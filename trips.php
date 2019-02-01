@@ -1,10 +1,10 @@
 <?php 
     $title = "Туры";
-    include("modules/head.php");
+    include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/head.php");
 ?>
 <body>
     <div class="wrapper">
-        <?php include("modules/header.php"); ?>
+        <?php include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/header.php"); ?>
     </div>
     <main>
         <div class="slider">
@@ -123,7 +123,7 @@
             </div>
         </section>
     </main>
-    <?php include("modules/footer.php") ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/footer.php") ?>
     
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>

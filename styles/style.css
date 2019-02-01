@@ -437,17 +437,21 @@ nav a {
 }
 
 .write-us textarea {
-  max-height: 125px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-height: 155px;
+  min-width: 49%;
 }
 
 .write-us__input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 3px solid #ffc155;
-  padding: 5px;
+  padding: 10px;
   font-size: 16px;
   margin-bottom: 10px;
   outline: none;
+  min-width: 100%;
 }
 
 .write-us__btn {
@@ -455,6 +459,17 @@ nav a {
   color: white;
   text-transform: lowercase;
   min-width: 49%;
+}
+
+.write-us__item {
+  position: relative;
+}
+
+.write-us__text {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  color: grey;
 }
 
 /* ========= footer ========= */
@@ -658,6 +673,10 @@ nav a {
 
 .height {
   max-height: 900px;
+}
+
+.error {
+  color: red;
 }
 
 /* ------------- icons ------------- */

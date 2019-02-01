@@ -1,10 +1,11 @@
 <?php 
     $title = "Главная страница";
-    include("modules/head.php"); 
+    include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/functions.php");
+    include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/head.php");
 ?>
 <body>
     <div class="wrapper">
-        <?php include("modules/header.php"); ?>
+        <?php include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/header.php"); ?>
     </div>
     <main>
         <div class="slider">
@@ -173,11 +174,20 @@
                 <h2 class="line">Напишите нам</h2>
             </div>
             <div class="wrapper">
-                <form method="GET" action="">
-                    <div>
-                        <input type="text" name="fio" class="write-us__input" placeholder="ФИО">
-                        <input type="text" name="email" class="write-us__input" placeholder="Email">
-                        <input type="text" name="tel" class="write-us__input" placeholder="Телефон">
+                <form method="POST" action="handlers/form.php">
+                    <div class="form-inputs">
+                        <div class="write-us__item">
+                            <input type="text" name="fio" class="write-us__input">
+                            <span class="write-us__text">ФИО</span>
+                        </div>
+                        <div class="write-us__item">
+                            <input type="text" name="email" class="write-us__input">
+                            <span class="write-us__text">E-mail</span>
+                        </div>
+                        <div class="write-us__item">
+                            <input type="text" name="tel" class="write-us__input">
+                            <span class="write-us__text">Телефон</span>
+                        </div>
                     </div>
                     <div>
                         <textarea name="message" class="write-us__input" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
@@ -187,7 +197,7 @@
             </div>
         </section>
     </main>
-    <?php include("modules/footer.php"); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/footer.php"); ?>
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>

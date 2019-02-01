@@ -33,53 +33,50 @@ myWindow.resize(function() {
     }
 });
 
+
+
+// Подсветка полей при отправке формы
+function findError(el) {
+    $(el).css('border-color', 'red');
+
+    var answer = $('.form-inputs').find('.error')
+    if (answer.length == 0) {
+        $('.form-inputs').prepend('<div class="error">Исправьте ошибки заполнения</div>');
+    }
+}
+
 var userName = $('[name = "fio"]');
 var userEmail = $('[name = "email"]');
 var userPhone = $('[name = "tel"]');
-var userMessage = $('[name = "message"]');
-
-// Подсветка полей при отправке формы
 
 $('form').submit(function() {
     if (!userName.val() || !userEmail.val() || !userPhone.val()) {
         if (!userName.val()) {
-            userName.css('border-color', 'red');
+            findError(userName);
         }
         if (!userEmail.val()) {
-            userEmail.css('border-color', 'red');
+            findError(userEmail);
         }
         if (!userPhone.val()) {
-            userPhone.css('border-color', 'red');
+            findError(userPhone);
         }
     } else {
-        $('[name = "fio"], [name = "email"], [name = "tel"], [name = "message"]').css('border-color', 'rgb(255, 193, 85)');
+        $('[name = "fio"], [name = "email"], [name = "tel"]').css('border-color', 'rgb(255, 193, 85)');
+        $('form').submit();
     }
     return false;
 });
 
 // Подсветка полей формы при наборе и удалении символов
-// Доработать на this! Почему-то не отвечает сайт на изменения файла
-
 $('[type = "text"]').keyup(function() {
-    if (!userName.val()) {
-        userName.css('border-color', 'red');
+    if (!$(this).val()) {
+        $(this).css('border-color', 'red');
     } else {
-        userName.css('border-color', 'rgb(255, 193, 85)');
-    }
-    if (!userEmail.val()) {
-        userEmail.css('border-color', 'red');
-    } else {
-        userEmail.css('border-color', 'rgb(255, 193, 85)');
-    }
-    if (!userPhone.val()) {
-        userPhone.css('border-color', 'red');
-    } else {
-        userPhone.css('border-color', 'rgb(255, 193, 85)');
+        $(this).css('border-color', 'rgb(255, 193, 85)')
     }
 });
 
 // SLIDER
-
 var sliderFlex = $('.slider__flex');
 var sliderItem = $('.slider__item');
 var sliderCounter = 1;
@@ -116,3 +113,17 @@ $('.arrow').click(function() {
     }
 });
 
+// Визуальный эффект при фокусе на инпут
+$('[type = "text"]').focusin(function() {
+    $(this).next().animate({
+        'top' : '2px',
+        'font-size' : '10px'
+    }, 300);
+});
+
+$('[type = "text"]').focusout(function() {
+    $(this).next().animate({
+        'top' : '13px',
+        'font-size' : '16px'
+    }, 300)
+});

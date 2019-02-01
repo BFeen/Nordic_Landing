@@ -1,10 +1,10 @@
 <?php 
     $title = "Контакты";
-    include("modules/head.php"); 
+    include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/head.php"); 
 ?>
 <body>
     <div class="wrapper">
-        <?php include("modules/header.php"); ?>
+        <?php include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/header.php"); ?>
     </div>
     <main>
         <div class="slider">
@@ -106,7 +106,7 @@
         </section>
         <iframe src="https://yandex.ru/map-widget/v1/-/CBF3USbXKD" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe>
     </main>
-    <?php include("modules/footer.php"); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/footer.php"); ?>
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
