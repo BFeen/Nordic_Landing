@@ -1,5 +1,6 @@
 <?php 
     $title = "Контакты";
+    $style = 'href="/MyMoscow/styles/style.css?v=1.1";';
     include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/head.php"); 
 ?>
 <body>
@@ -17,9 +18,11 @@
             </div>
         </div>
         <section class="hello">
-            <div class="pic-center">
+            <div class="arrows">
                 <div class="arrow left">&lt;</div>
                 <div class="arrow right">&gt;</div>
+            </div>
+            <div class="pic-center">
                 <h1>MyMoscow</h1>
                 <p>агенство интересных маршрутов</p>
                 <p>- Контакты -</p>
@@ -96,8 +99,14 @@
                 <div class="contacts__item">
                     <p>Напишите нам</p>
                     <form action="" method="GET">
-                        <input type="text" class="contacts__input" name="fio" placeholder="ФИО">
-                        <input type="text" class="contacts__input" name="email" placeholder="E-mail">
+                        <div class="write-us__item">
+                            <input type="text" class="contacts__input" name="fio">
+                            <span class="write-us__text">ФИО</span>
+                        </div>
+                        <div class="write-us__item">
+                            <input type="text" class="contacts__input" name="email">
+                            <span class="write-us__text">E-mail</span>
+                        </div>
                         <textarea name="" id="" cols="30" rows="5" class="contacts__input" placeholder="Ваше сообщение"></textarea>
                         <input type="submit" class="contacts__input contacts__button">
                     </form>

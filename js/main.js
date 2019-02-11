@@ -33,12 +33,9 @@ myWindow.resize(function() {
     }
 });
 
-
-
 // Подсветка полей при отправке формы
 function findError(el) {
     $(el).css('border-color', 'red');
-
     var answer = $('.form-inputs').find('.error')
     if (answer.length == 0) {
         $('.form-inputs').prepend('<div class="error">Исправьте ошибки заполнения</div>');
@@ -115,15 +112,17 @@ $('.arrow').click(function() {
 
 // Визуальный эффект при фокусе на инпут
 $('[type = "text"]').focusin(function() {
-    $(this).next().animate({
+    $(this).next('.write-us__text').animate({
         'top' : '2px',
         'font-size' : '10px'
     }, 300);
 });
 
 $('[type = "text"]').focusout(function() {
-    $(this).next().animate({
-        'top' : '13px',
-        'font-size' : '16px'
-    }, 300)
+    if ($(this).val() == '') {
+        $(this).next('.write-us__text').animate({
+            'top' : '13px',
+            'font-size' : '16px'
+        }, 300)
+    }
 });

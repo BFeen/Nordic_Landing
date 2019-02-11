@@ -1,5 +1,6 @@
 <?php 
     $title = "Туры";
+    $style = 'href="/MyMoscow/styles/style.css?v=1.1";';
     include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/head.php");
 ?>
 <body>
@@ -17,9 +18,11 @@
             </div>
         </div>
         <section class="hello">
-            <div class="pic-center">
+            <div class="arrows">
                 <div class="arrow left">&lt;</div>
                 <div class="arrow right">&gt;</div>
+            </div>
+            <div class="pic-center">
                 <h1>MyMoscow</h1>
                 <p>агенство интересных маршрутов</p>
                 <p>- Туры -</p>
@@ -31,7 +34,7 @@
             </div>
             <div class="about">
                 <div class="about__photo trips-1"></div>
-                <div class="about__block">
+                <div class="about__block order">
                     <h2 class="about__title">Экскурсия-квест в комплексе Москва-сити</h2>
                     <p class="about__text">
                         Сначала вам предложат погулять по “острову из стекла и бетона”, 
@@ -55,7 +58,7 @@
                 </div>
             </div>
             <div class="about">
-                <div class="about__block">
+                <div class="about__block order">
                     <h2 class="about__title">Легенды сталинских высоток</h2>
                     <p class="about__text">
                         Семь сталинских высоток — это визитная карточка Москвы, одни из самых красивых 
@@ -75,7 +78,7 @@
             </div>
             <div class="about">
                 <div class="about__photo trips-3"></div>
-                <div class="about__block">
+                <div class="about__block order">
                     <h2 class="about__title">По следам мастера и маргариты</h2>
                     <p class="about__text">
                         "Однажды весною, в час небывало жаркого заката, в Москве, на Патриарших прудах... ". 
@@ -97,7 +100,7 @@
                 </div>
             </div>
             <div class="about">
-                <div class="about__block">
+                <div class="about__block order">
                     <h2 class="about__title">Легенды московского метро</h2>
                     <p class="about__text">
                         Построенная в 30-е годы система московского метрополитена была частью 

@@ -1,5 +1,6 @@
 <?php 
     $title = "Главная страница";
+    $style = 'href="/MyMoscow/styles/style.css?v=1.1";';
     include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/functions.php");
     include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/head.php");
 ?>
@@ -18,9 +19,11 @@
             </div>
         </div>
         <section class="hello">
+                <div class="arrows">
+                    <div class="arrow left">&lt;</div>
+                    <div class="arrow right">&gt;</div>
+                </div>
             <div class="pic-center">
-                <div class="arrow left">&lt;</div>
-                <div class="arrow right">&gt;</div>
                 <h1>Необычная Москва</h1>
                 <p>MyMoscow - агенство интересных маршрутов</p>
             </div>
@@ -189,8 +192,44 @@
                             <span class="write-us__text">Телефон</span>
                         </div>
                     </div>
-                    <div>
+                    <div class="form-inputs">
                         <textarea name="message" class="write-us__input" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+                    </div>
+                    <div class="form-inputs form-questions">
+                        <div class="form-questions__text">Когда с Вами можно связаться?</div>
+                        <label>
+                            <input type="checkbox" name="connect-time[]" value="9-11">9-11
+                            <div class="checkbox"></div>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="connect-time[]" value="11-14">11-14
+                            <div class="checkbox"></div>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="connect-time[]" value="14-18">14-18
+                            <div class="checkbox"></div>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="connect-time[]" value="18-22">18-22
+                            <div class="checkbox"></div>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="connect-time[]" value="в любое время">В любое время
+                            <div class="checkbox"></div>
+                        </label>
+                    </div>
+                    <div class="form-inputs form-questions">
+                        <div class="form-questions__text">Как с Вами связаться?</div>
+                        <label class="">
+                            <div>По E-mail:</div>
+                            <input type="radio" name="connect" value="email">
+                            <div class="radio"></div>
+                        </label>
+                        <label class="">
+                            <div>По телефону:</div>
+                            <input type="radio" name="connect" value="phone">
+                            <div class="radio"></div>
+                        </label>
                     </div>
                     <input type="submit" class="write-us__input write-us__btn" value="Отправить вопрос">
                 </form>
