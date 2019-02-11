@@ -36,10 +36,10 @@ myWindow.resize(function() {
 // Подсветка полей при отправке формы
 function findError(el) {
     $(el).css('border-color', 'red');
-    var answer = $('.form-inputs').find('.error')
-    if (answer.length == 0) {
-        $('.form-inputs').prepend('<div class="error">Исправьте ошибки заполнения</div>');
-    }
+    // var answer = $('.form-inputs').find('.error')
+    // if (answer.length == 0) {
+    //     $('.form-inputs').prepend('<div class="error">Исправьте ошибки заполнения</div>');
+    // }
 }
 
 var userName = $('[name = "fio"]');

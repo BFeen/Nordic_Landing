@@ -30,7 +30,15 @@
 
     $db = mysqli_connect('localhost', 'root', '', '02112018_Arkhipov');
     mysqli_set_charset($db, 'utf8');
-    $result = mysqli_query($db, "INSERT INTO `users` (`name`, `email`, `phone`) VALUES ('{$_POST['fio']}', '{$_POST['email']}', '{$_POST['tel']}')");
+    $result = mysqli_query($db, 
+        "INSERT INTO `users` (`name`, `email`, `phone`) 
+        VALUES ('{$_POST['fio']}', '{$_POST['email']}', '{$_POST['tel']}')"
+    );
+
+    mysqli_query($db, 
+        "INSERT INTO `leads` (`user_email`, `message`, `connect`, `connect-time`) 
+        VALUES ('{$_POST['email']}', '{$_POST['message']}', '{$_POST['connect']}', '{$_POST['connect-time']}')"
+    );
 
     if (!$result) {
         echo 'Произошла ошибка при отправке в БД<br>';
