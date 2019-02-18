@@ -781,6 +781,23 @@ iframe {
 //     }
 // }
 
+// ------------- table -------------
+.table {
+    display: table;
+    border: 4px solid $clr-orange;
+    margin: auto;
+
+    &__row {
+        display: table-row;
+        padding: 5px;
+    }
+    &__cell {
+        display: table-cell;
+        padding: 10px;
+        border: 2px solid $clr-orange;
+    }
+}
+
 /* ------------- media ------------- */
 @media (max-width: 879px) {
     .gallery__item {

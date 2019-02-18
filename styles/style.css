@@ -1048,6 +1048,23 @@ iframe {
   border-top: 3px solid #ffc155;
 }
 
+.table {
+  display: table;
+  border: 4px solid #ffc155;
+  margin: auto;
+}
+
+.table__row {
+  display: table-row;
+  padding: 5px;
+}
+
+.table__cell {
+  display: table-cell;
+  padding: 10px;
+  border: 2px solid #ffc155;
+}
+
 /* ------------- media ------------- */
 @media (max-width: 879px) {
   .gallery__item {
