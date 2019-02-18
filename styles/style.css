@@ -558,10 +558,6 @@ nav a {
   padding: 30px 0;
 }
 
-.footer-top * {
-  font-family: "Myriad Pro";
-}
-
 .footer-top .logo__icon {
   width: 40px;
 }
@@ -602,7 +598,7 @@ nav a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px;
-  width: 33.333%;
+  min-width: 33.333%;
 }
 
 .footer-top__item .address {
@@ -619,12 +615,13 @@ nav a {
 
 .footer-top__item .news span {
   color: #71b6d5;
+  font-size: 10px;
 }
 
 .footer-top__text {
   margin-top: 10px;
   color: #c3c3c3;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .footer-top__icon {
@@ -1063,6 +1060,12 @@ iframe {
   display: table-cell;
   padding: 10px;
   border: 2px solid #ffc155;
+}
+
+.handler {
+  padding-bottom: 20px;
+  width: 800px;
+  margin: auto;
 }
 
 /* ------------- media ------------- */

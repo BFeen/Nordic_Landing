@@ -1,13 +1,15 @@
+<!-- $d_root = $_SERVER['DOCUMENT_ROOT']; -->
+<div class="wrapper">
 <header>
     <a href="index.php" class="logo">
-        <img src="images/icons/spasskaya-tower.png" alt="logo" class="logo__icon">
+        <img src="/MyMoscow/images/icons/spasskaya-tower.png" alt="logo" class="logo__icon">
         <span href="index.php" class="logo__text">MyMoscow</span>
     </a>
     <nav>
-        <a href="index.php">Главная</a>
-        <a href="trips.php">Наши услуги</a>
+        <a href=<?php echo $_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/index.php"; ?>>Главная</a>
+        <a href=<?php echo $_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/trips.php"; ?>>Наши услуги</a>
         <a href="">О компании</a>
-        <a href="contacts.php">Контакты</a>
+        <a href=<?php echo $_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/index.php"; ?>>Контакты</a>
         <a href="">Отзывы</a>
     </nav>
     <div class="menu-btn">
@@ -16,3 +18,4 @@
         <div class="menu-btn__stick"></div>
     </div>
 </header>
+</div>
