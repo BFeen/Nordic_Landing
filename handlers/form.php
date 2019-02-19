@@ -29,7 +29,7 @@
     echo "<section class='handler wrapper'>";
 
         $get_user = mysqli_query($db, "SELECT `email` FROM `users` WHERE `email` = '{$_POST['email']}'");
-        if (!$get_user) { // Проверка на уникальность пользователя
+        if (mysqli_num_rows($get_user) == 0) { // Проверка на уникальность пользователя
             $result = mysqli_query($db, 
                 "INSERT INTO `users` (`name`, `email`, `phone`) 
                 VALUES ('{$_POST['fio']}', '{$_POST['email']}', '{$_POST['tel']}')"

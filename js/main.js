@@ -46,7 +46,7 @@ var userName = $('[name = "fio"]');
 var userEmail = $('[name = "email"]');
 var userPhone = $('[name = "tel"]');
 
-$('form').submit(function() {
+$('#main-form').submit(function() {
     if (!userName.val() || !userEmail.val() || !userPhone.val()) {
         if (!userName.val()) {
             findError(userName);
@@ -59,7 +59,7 @@ $('form').submit(function() {
         }
     } else {
         $('[name = "fio"], [name = "email"], [name = "tel"]').css('border-color', 'rgb(255, 193, 85)');
-        $('form').submit();
+        $('#main-form').submit();
     }
     return false;
 });

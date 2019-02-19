@@ -177,7 +177,7 @@
                 <h2 class="line">Напишите нам</h2>
             </div>
             <div class="wrapper">
-                <form method="POST" action="handlers/form.php">
+                <form id="main-form" method="POST" action="handlers/form.php">
                     <div class="form-inputs">
                         <div class="write-us__item">
                             <input type="text" name="fio" class="write-us__input">

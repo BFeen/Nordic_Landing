@@ -34,9 +34,9 @@
             <div class="section__title">
                 <h2>Поиск по клиентам</h2>
             </div>
-            <form action="" method="get">
-                <input type="text" name="search" placeholder="Введите имя клиента">
-                <input type="submit" value="Найти">
+            <form class="search-form" action="" method="get">
+                <input type="text" class="write-us__input" name="search" placeholder="Введите имя клиента">
+                <input type="submit" class="write-us__input write-us__btn" value="Найти">
             </form>
             <?php 
                 include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/db.php");
@@ -44,19 +44,19 @@
                 if ( !empty($_GET) ) {
                     if ( !empty($_GET['search']) ) {
                         $search = $_GET['search'];
-                        $user_data = mysqli_query($db, 'SELECT * FROM `users`');
-                        if ( mysqli_num_rows($user_data ) != 0) {
+                        $user_data = mysqli_query($db, "SELECT * FROM `users` WHERE `email` = '{$_GET['search']}'");
+                        if ( mysqli_num_rows($user_data) != 0) {
                             $counter = 1;
                             $clients = 
                             '<div class="table">';
                             while ( $row = mysqli_fetch_assoc($user_data) ) {
                                 $clients .=
-                                '<div class="table__row">
-                                    <div class="table__cell">' . $counter . '</div>
-                                    <div class="table__cell">' . $row['name'] . '</div>
-                                    <div class="table__cell">' . $row['email'] . '</div>
-                                    <div class="table__cell">' . $row['phone'] . '</div>
-                                </div>';
+                                "<div class='table__row'>
+                                    <div class='table__cell'>$counter</div>
+                                    <div class='table__cell'>{$row['name']}</div>
+                                    <div class='table__cell'>{$row['email']}</div>
+                                    <div class='table__cell'>{$row['phone']}</div>
+                                </div>";
                                 $counter++;
                             }
                             $clients .=
@@ -80,6 +80,6 @@
     <?php include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/footer.php"); ?>
 
     <script src="js/jquery-3.3.1.min.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/main.js"></script>
 </body>
 </html>
