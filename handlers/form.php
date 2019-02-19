@@ -1,30 +1,31 @@
 <?php 
     $title = 'Обработчик форм';
-    $style = 'href="/MyMoscow/styles/style.css?v=1.1"';
-    include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/functions.php");
-    include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/head.php");
-    include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/header.php");
-    echo '
-    <div class="slider">
-        <div class="slider__flex">
-            <div class="slider__item">3</div>
-            <div class="slider__item img-trips"></div>
-            <div class="slider__item">2</div>
-            <div class="slider__item">3</div>
-            <div class="slider__item img-trips"></div>
+    $style = 'href="/styles/style.css?v=1.1"';
+    include($_SERVER['DOCUMENT_ROOT'] . "/modules/functions.php");
+    include($_SERVER['DOCUMENT_ROOT'] . "/modules/head.php");
+    include($_SERVER['DOCUMENT_ROOT'] . "/modules/header.php");
+    include($_SERVER['DOCUMENT_ROOT'] . "/modules/slider.php");
+    echo "
+    <div class='slider'>
+        <div class='slider__flex'>
+            <div class='slider__item'>3</div>
+            <div class='slider__item img-trips'></div>
+            <div class='slider__item'>2</div>
+            <div class='slider__item'>3</div>
+            <div class='slider__item img-trips'></div>
         </div>
     </div>
-    <section class="hello">
-        <div class="arrows">
-            <div class="arrow left">&lt;</div>
-            <div class="arrow right">&gt;</div>
+    <section class='hello'>
+        <div class='arrows'>
+            <div class='arrow left'>&lt;</div>
+            <div class='arrow right'>&gt;</div>
         </div>
-        <div class="pic-center">
+        <div class='pic-center'>
             <h1>MyMoscow</h1>
-            <p>- Обработчик формы -</p>
+            <p>- $title -</p>
         </div>
-    </section>';
-    include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/db.php");
+    </section>";
+    include($_SERVER['DOCUMENT_ROOT'] . "/modules/db.php");
 
     echo "<section class='handler wrapper'>";
 
@@ -59,5 +60,5 @@
         }
     echo "</section>";        
 
-    include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/footer.php");
+    include($_SERVER['DOCUMENT_ROOT'] . "/modules/footer.php");
 ?>

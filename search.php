@@ -1,24 +1,19 @@
 <?php 
     $title = 'Поиск';
-    $style = 'href="/MyMoscow/styles/style.css?v=1.1";';
-    include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/head.php"); 
+    $style = 'href="/styles/style.css?v=1.1";';
+    include($_SERVER['DOCUMENT_ROOT'] . "/modules/head.php"); 
     $clients = '';
 ?>
 
 <body>
     <div class="wrapper">
-        <?php include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/header.php"); ?>
+        <?php include($_SERVER['DOCUMENT_ROOT'] . "/modules/header.php"); ?>
     </div>
     <main>
-        <div class="slider">
-            <div class="slider__flex">
-                <div class="slider__item">3</div>
-                <div class="slider__item img-contacts"></div>
-                <div class="slider__item">2</div>
-                <div class="slider__item">3</div>
-                <div class="slider__item img-contacts"></div>
-            </div>
-        </div>
+        <?php 
+            $img = 'img-contacts';
+            include($_SERVER['DOCUMENT_ROOT'] . '/modules/slider.php')
+        ?>
         <section class="hello">
             <div class="arrows">
                 <div class="arrow left">&lt;</div>
@@ -39,12 +34,12 @@
                 <input type="submit" class="write-us__input write-us__btn" value="Найти">
             </form>
             <?php 
-                include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/db.php");
+                include($_SERVER['DOCUMENT_ROOT'] . "/modules/db.php");
 
                 if ( !empty($_GET) ) {
                     if ( !empty($_GET['search']) ) {
                         $search = $_GET['search'];
-                        $user_data = mysqli_query($db, "SELECT * FROM `users` WHERE `email` = '{$_GET['search']}'");
+                        $user_data = mysqli_query($db, "SELECT * FROM `users` WHERE `email` = '{$_GET['search']}' OR `name` = '{$_GET['search']}'");
                         if ( mysqli_num_rows($user_data) != 0) {
                             $counter = 1;
                             $clients = 
@@ -62,10 +57,10 @@
                             $clients .=
                             '</div>';
                         } else {
-                            $clients = 'Ничего не найдено';
+                            $clients = '<div class="table">Ничего не найдено</div>';
                         }
                     } else {
-                        $clients = 'В строку поиска ничего не вписали';
+                        $clients = '<div class="table">В строку поиска ничего не вписали</div>';
                     }
                 }
             ?>
@@ -77,9 +72,9 @@
         </section>
     </main>
 
-    <?php include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/footer.php"); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'] . "/modules/footer.php"); ?>
 
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
 </body>
 </html>

@@ -1,4 +1,5 @@
 var myWindow = $(window);
+console.log(myWindow.scrollTop());
 var stick = $('.menu-btn__stick');
 // Анимация кнопки меню и отображение\скрытие адаптивного меню
 $('.menu-btn').click(function() {
@@ -25,7 +26,6 @@ $('.menu-btn').click(function() {
     stick.eq(0).toggleClass('menu-btn__stick-first');
     stick.eq(2).toggleClass('menu-btn__stick-last');
 });
-
 // Отображение обычного меню
 myWindow.resize(function() {
     if (myWindow.width() > 880) {
@@ -46,7 +46,7 @@ var userName = $('[name = "fio"]');
 var userEmail = $('[name = "email"]');
 var userPhone = $('[name = "tel"]');
 
-$('#main-form').submit(function() {
+$('form').submit(function() {
     if (!userName.val() || !userEmail.val() || !userPhone.val()) {
         if (!userName.val()) {
             findError(userName);
@@ -59,8 +59,9 @@ $('#main-form').submit(function() {
         }
     } else {
         $('[name = "fio"], [name = "email"], [name = "tel"]').css('border-color', 'rgb(255, 193, 85)');
-        $('#main-form').submit();
+        $('form').submit();
     }
+    // поднять пользователя к подсвеченным полям
     return false;
 });
 

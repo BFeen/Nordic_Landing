@@ -2,9 +2,9 @@
     <div class="footer-top">
         <div class="wrapper">
             <div class="footer-top__item">
-                <a href="index.html" class="logo">
-                    <img src="images/icons/spasskaya-tower.png" alt="logo" class="logo__icon">
-                    <span href="index.html" class="logo__text">MyMoscow</span>
+                <a href="/index.php" class="logo">
+                    <img src="/images/icons/spasskaya-tower.png" alt="logo" class="logo__icon">
+                    <span class="logo__text">MyMoscow</span>
                 </a>
                 <p class="footer-top__text">
                     Мы приглашаем тебя на самые разные экскурсии по Москве. Автобусные и пешеходные,

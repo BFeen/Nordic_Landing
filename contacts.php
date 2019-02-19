@@ -1,22 +1,17 @@
 <?php 
     $title = "Контакты";
-    $style = 'href="/MyMoscow/styles/style.css?v=1.1";';
-    include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/head.php"); 
+    $style = 'href="/styles/style.css?v=1.1";';
+    include($_SERVER['DOCUMENT_ROOT'] . "/modules/head.php"); 
 ?>
 <body>
     <div class="wrapper">
-        <?php include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/header.php"); ?>
+        <?php include($_SERVER['DOCUMENT_ROOT'] . "/modules/header.php"); ?>
     </div>
     <main>
-        <div class="slider">
-            <div class="slider__flex">
-                <div class="slider__item">3</div>
-                <div class="slider__item img-contacts"></div>
-                <div class="slider__item">2</div>
-                <div class="slider__item">3</div>
-                <div class="slider__item img-contacts"></div>
-            </div>
-        </div>
+        <?php 
+            $img = 'img-contacts';
+            include($_SERVER['DOCUMENT_ROOT'] . '/modules/slider.php')
+        ?>
         <section class="hello">
             <div class="arrows">
                 <div class="arrow left">&lt;</div>
@@ -115,7 +110,7 @@
         </section>
         <iframe src="https://yandex.ru/map-widget/v1/-/CBF3USbXKD" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe>
     </main>
-    <?php include($_SERVER['DOCUMENT_ROOT'] . "/MyMoscow/modules/footer.php"); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT'] . "/modules/footer.php"); ?>
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
