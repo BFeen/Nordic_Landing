@@ -293,15 +293,14 @@ nav {
             display: flex;
             flex-direction: column;
             min-width: 49%;
-            &:nth-child(1), &:nth-child(3) {
-                margin-right: 10px;
-            }
         }
     }
     .form-inputs {
-        width: 49%;
+        flex-grow: 1;
+        flex-basis: 300px;
+        width: 50%;
         box-sizing: border-box;
-
+        padding: 0 5px;
     }
     &__input {
         box-sizing: border-box;
@@ -314,8 +313,7 @@ nav {
     }
     textarea {
         box-sizing: border-box;
-        max-height: 155px;
-        width: 98%;
+        height: 155px;
     }
     &__btn {
         background-color: rgb(39, 58, 67);
@@ -336,6 +334,7 @@ nav {
 .form-questions {
     margin-bottom: 15px;
     border: 3px solid $clr-orange;
+    height: 100%;
     &__text {
         color: white;
         background: $clr-orange;
@@ -403,9 +402,6 @@ nav {
 .footer-top {
     background-color: #273a43;
     padding: 30px 0;
-    * {
-        // font-family: "Myriad Pro";
-    }
     .logo {
         &__icon {
             width: 40px;
@@ -451,6 +447,7 @@ nav {
         margin-top: 10px;
         color: rgb(195, 195, 195);
         font-size: 12px;
+        line-height: 16px;
     }
     &__icon {
         padding: 10px;

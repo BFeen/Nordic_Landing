@@ -188,43 +188,47 @@
                         </div>
                     </div>
                     <div class="form-inputs">
-                        <textarea name="message" class="write-us__input" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+                        <textarea name="message" class="write-us__input" placeholder="Ваше сообщение"></textarea>
                     </div>
-                    <div class="form-inputs form-questions">
-                        <div class="form-questions__text">Когда с Вами можно связаться?</div>
-                        <label>
-                            <input type="checkbox" name="connect-time[]" value="9-11">9-11
-                            <div class="checkbox"></div>
-                        </label>
-                        <label>
-                            <input type="checkbox" name="connect-time[]" value="11-14">11-14
-                            <div class="checkbox"></div>
-                        </label>
-                        <label>
-                            <input type="checkbox" name="connect-time[]" value="14-18">14-18
-                            <div class="checkbox"></div>
-                        </label>
-                        <label>
-                            <input type="checkbox" name="connect-time[]" value="18-22">18-22
-                            <div class="checkbox"></div>
-                        </label>
-                        <label>
-                            <input type="checkbox" name="connect-time[]" value="в любое время">В любое время
-                            <div class="checkbox"></div>
-                        </label>
+                    <div class="form-inputs">
+                        <div class="form-questions">
+                            <div class="form-questions__text">Когда с Вами можно связаться?</div>
+                            <label>
+                                <input type="checkbox" name="connect-time[]" value="9-11">9-11
+                                <div class="checkbox"></div>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="connect-time[]" value="11-14">11-14
+                                <div class="checkbox"></div>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="connect-time[]" value="14-18">14-18
+                                <div class="checkbox"></div>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="connect-time[]" value="18-22">18-22
+                                <div class="checkbox"></div>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="connect-time[]" value="в любое время">В любое время
+                                <div class="checkbox"></div>
+                            </label>
+                        </div>
                     </div>
-                    <div class="form-inputs form-questions">
-                        <div class="form-questions__text">Как с Вами связаться?</div>
-                        <label class="">
-                            <div>По E-mail:</div>
-                            <input type="radio" name="connect" value="email">
-                            <div class="radio"></div>
-                        </label>
-                        <label class="">
-                            <div>По телефону:</div>
-                            <input type="radio" name="connect" value="phone">
-                            <div class="radio"></div>
-                        </label>
+                    <div class="form-inputs">
+                        <div class="form-questions">
+                            <div class="form-questions__text">Как с Вами связаться?</div>
+                            <label class="">
+                                <div>По E-mail:</div>
+                                <input type="radio" name="connect" value="email">
+                                <div class="radio"></div>
+                            </label>
+                            <label class="">
+                                <div>По телефону:</div>
+                                <input type="radio" name="connect" value="phone">
+                                <div class="radio"></div>
+                            </label>
+                        </div>
                     </div>
                     <input type="submit" class="write-us__input write-us__btn" value="Отправить вопрос">
                 </form>
