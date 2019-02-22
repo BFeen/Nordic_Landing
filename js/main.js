@@ -1,5 +1,4 @@
 var myWindow = $(window);
-console.log(myWindow.scrollTop());
 var stick = $('.menu-btn__stick');
 // Анимация кнопки меню и отображение\скрытие адаптивного меню
 $('.menu-btn').click(function() {
@@ -46,6 +45,8 @@ var userName = $('[name = "fio"]');
 var userEmail = $('[name = "email"]');
 var userPhone = $('[name = "tel"]');
 
+console.log(userName.offset().top);
+
 $('form').submit(function() {
     if (!userName.val() || !userEmail.val() || !userPhone.val()) {
         if (!userName.val()) {
@@ -62,6 +63,9 @@ $('form').submit(function() {
         $('form').submit();
     }
     // поднять пользователя к подсвеченным полям
+    $('html, body').animate({
+        scrollTop : userName.offset().top - 160
+    }, 500);
     return false;
 });
 

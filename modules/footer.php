@@ -32,14 +32,16 @@
                 <p class="footer-top__title">Последние новости</p>
                 <div class="news">
                     <p class="footer-top__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cumque magnam odit sit
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Quos cumque magnam odit sit
                         explicabo similique esse at a corrupti.
                     </p>
                     <span>5 марта 2018</span>
                 </div>
                 <div class="news">
                     <p class="footer-top__text">
-                        Fugiat ratione assumenda excepturi ut non, veniam dolore quibusdam sunt voluptatibus.
+                        Fugiat ratione assumenda excepturi ut non, 
+                        veniam dolore quibusdam sunt voluptatibus.
                     </p>
                     <span>5 марта 2018</span>
                 </div>
