@@ -570,8 +570,6 @@ nav a {
 }
 
 .footer-top .wrapper {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -595,12 +593,12 @@ nav a {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  -ms-flex-preferred-size: 200px;
-      flex-basis: 200px;
+  -ms-flex-preferred-size: 250px;
+      flex-basis: 250px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 10px;
-  min-width: 33.333%;
+  padding: 0 20px;
+  min-width: 100px;
 }
 
 .footer-top__item .address {

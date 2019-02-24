@@ -7,10 +7,6 @@
     include($_SERVER['DOCUMENT_ROOT'] . "/modules/slider.php");
     echo "
     <section class='hello'>
-        <div class='arrows'>
-            <div class='arrow left'>&lt;</div>
-            <div class='arrow right'>&gt;</div>
-        </div>
         <div class='pic-center'>
             <h1>MyMoscow</h1>
             <p>- $title -</p>

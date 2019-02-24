@@ -412,12 +412,11 @@ nav {
         }
     }
     .wrapper {
-        box-sizing: border-box;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         flex-wrap: wrap;
-    }
+       }
     &__title {
         font-size: 22px;
         color: white;
@@ -425,10 +424,10 @@ nav {
     }
     &__item {
         flex-grow: 1;
-        flex-basis: 200px;
+        flex-basis: 250px;
         box-sizing: border-box;
-        padding: 10px;
-        min-width: 33.333%;
+        padding: 0 20px;
+        min-width: 100px;
         .address {
             display: flex;
             align-items: center;
