@@ -551,6 +551,16 @@ nav {
 .order {
     order: 0;
 }
+.snowflake {
+    position: absolute;
+    top: -40px;
+    padding: 20px;
+    animation: snowflakes linear 4s infinite;
+    z-index: 9999;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 /* ------------- icons ------------- */
 .map {
     background-image: url(../images/icons/map.png);
@@ -845,5 +855,11 @@ iframe {
     .card__img {
         border-right: none;
         border-bottom: 8px solid $clr-blue;
+    }
+}
+// Animation
+@keyframes snowflakes {
+    100% {
+        top: 500px;
     }
 }

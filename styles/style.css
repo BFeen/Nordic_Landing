@@ -763,6 +763,18 @@ nav a {
           order: 0;
 }
 
+.snowflake {
+  position: absolute;
+  top: -40px;
+  padding: 20px;
+  -webkit-animation: snowflakes linear 4s infinite;
+          animation: snowflakes linear 4s infinite;
+  z-index: 9999;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 /* ------------- icons ------------- */
 .map {
   background-image: url(../images/icons/map.png);
@@ -1113,6 +1125,18 @@ iframe {
   .card__img {
     border-right: none;
     border-bottom: 8px solid #709dca;
+  }
+}
+
+@-webkit-keyframes snowflakes {
+  100% {
+    top: 500px;
+  }
+}
+
+@keyframes snowflakes {
+  100% {
+    top: 500px;
   }
 }
 /*# sourceMappingURL=style.css.map */

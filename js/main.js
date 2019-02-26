@@ -45,8 +45,6 @@ var userName = $('[name = "fio"]');
 var userEmail = $('[name = "email"]');
 var userPhone = $('[name = "tel"]');
 
-console.log(userName.offset().top);
-
 $('form').submit(function() {
     if (!userName.val() || !userEmail.val() || !userPhone.val()) {
         if (!userName.val()) {
@@ -131,3 +129,25 @@ $('[type = "text"]').focusout(function() {
         }, 300)
     }
 });
+
+// Снежинки и анимация Vanilla.js
+var counter = 0, 
+    body = document.querySelector('body'),
+    link = '../images/snowflakes/',
+    pics = [link+'1.svg', link+'2.svg', link+'3.svg', link+'4.svg', link+'5.svg' ];
+
+setInterval(function() {
+    if (counter < 10) {
+        var rnd = Math.floor(Math.random() * pics.length);
+        var snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+
+        snowflake.style.left = Math.random() * 100 + '%';
+        snowflake.style.padding = Math.random() * 13 + 2 + "px";
+        snowflake.style.backgroundImage = "url(" + pics[rnd] + ")";
+
+        body.appendChild(snowflake);
+    }
+    counter++;
+}, 1150);
+
